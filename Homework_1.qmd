@@ -1,0 +1,105 @@
+---
+title: "Homework 1"
+format: html
+editor: visual
+---
+
+## Exercise 1
+
+Read (Sec 1.1, pp1-2 [Sutton and Barto 2018](https://sauldiazinfante.github.io/RL-Course-2024-2/references.html#ref-Sutton2018)) and answer the following.
+
+Explain why Reinforcement Learning differs for supervised and unsupervised learning.
+
+**Answer:**
+
+Reinforcement Learning is different from supervised learning because it doesn't need a training set of examples to "learn". RL shoould learn from it's own experience.
+
+it is also different from unsupervised learning because it isn't trying to find a hidden structure. RL is trying to maximize a reward or minimize a cost.
+
+## Exercise 2
+
+See the first Steve Brunton's youtube video about [Reinforcement Learning](https://www.youtube.com/watch?v=0MNVhXEX9to&list=PLMrJAkhIeNNQe1JXNvaFvURxGY4gE9k74). Then accordingly to its presentation explain what is the meaning of the following expression:
+
+$$
+V_\pi (s) = \mathbb{E}\left(\sum_t \gamma^t r_t | s_0 = s\right)
+$$
+
+**Answer:**
+
+It is the expected reward if we start in a state $s$ and we enact the policy $\pi$. The $\gamma$ in the equation is a discounting rate.
+
+## Exercise 3
+
+Form (see [Sutton and Barto 2018, sec. 1.7](https://sauldiazinfante.github.io/RL-Course-2024-2/references.html#ref-Sutton2018)) obtain a time line pear year from 1950 to 2012.
+
+Use the following format [see https://kim.quarto.pub/milestones–bar-timelines/](https://kim.quarto.pub/milestones--bar-timelines/)
+
+## Exercise 4
+
+Consider the following **consumption–saving** problem with dynamics
+
+$$
+x_{k+1} = (1+r)(x_k-a_k), \ \ k=0,1,\dots , N-1,
+$$
+
+and utility function
+
+$$
+\beta^N(x_N)^{1-\gamma} + \sum_{k=0}^{N-1}\beta^k(a_k)^{1-\gamma}.
+$$
+
+Show that the value functions of the DP algorithm take the form
+
+$$
+J_k(x)=A_k\beta^kx^{1-\gamma},
+$$
+
+where $A_N =1$ and for $k =N-1,\dots,0,$
+
+$$
+A_k =[1+((1+R)\beta A_{k+1})^{1/\gamma}]^\gamma.
+$$
+
+Show also that the optimal policies are $h_k(x) = A_k^{-1/\gamma}x$, for $k =N-1,\dots,0$.
+
+**Answer:**
+
+## Exercise 5
+
+Consider now the infinite–horizon version of the above consumption–saving problem.
+
+i.  Write down the associated Bellman equation.
+
+    **Answer:**
+
+ii. Argue why a solution to the Bellman equation should be of the form
+
+    $$
+    v(x)=cx^{1-\gamma},
+    $$
+
+    where $c$ is constant. Find the constant $c$ and the stationary optimal policy.
+
+    **Answer:**
+
+## Exercise 6
+
+Let $\{ \xi_k \}$ be a sequence of iid random variables such that $E[\xi]=0$ and $E[\xi^2]=d$. Consider the dynamics
+
+$$
+x_{k+1}=x_k+a_k+\xi_k, \ \ k=0,1,\dots,
+$$
+
+and the discounted cost
+
+$$
+E\sum \beta^k(a_k^2+x_k^2).
+$$
+
+i.  Write down the associated Bellman equation.
+
+ii. Conjecture that the solution to the Bellman equation takes the for
+
+    $v(x) =ax^2+b$, where $a$ and $b$ are constant.
+
+    Determine the constants $a$ and $b$.
